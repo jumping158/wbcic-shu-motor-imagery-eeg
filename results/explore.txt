@@ -1,0 +1,75 @@
+==========================================================================
+WBCIC-SHU(2025) 数据探查 -- sub-001
+figshare: https://doi.org/10.25452/figshare.plus.22671172  (v5)
+==========================================================================
+
+[一] 文件清单（含大小，MB）
+       0.000 MB   CHANGES
+       0.016 MB   LICENSE
+       0.002 MB   README.md
+       0.000 MB   _unrar.log
+       1.343 MB   code.rar
+       0.001 MB   dataset_description.json
+       0.000 MB   participants.json
+       0.001 MB   participants_2C.tsv
+       0.000 MB   participants_3C.tsv
+      43.046 MB   sub-001_ses-01_task-motorimagery_eeg.mat
+      43.064 MB   sub-001_ses-02_task-motorimagery_eeg.mat
+      43.011 MB   sub-001_ses-03_task-motorimagery_eeg.mat
+       0.001 MB   task-motorimagery_channels.tsv
+       0.000 MB   task-motorimagery_coordsystem.json
+       0.001 MB   task-motorimagery_eeg.json
+       0.002 MB   task-motorimagery_electrodes.tsv
+       0.001 MB   task-motorimagery_events.json
+       0.000 MB   code_ref\code\.idea\.gitignore
+       0.000 MB   code_ref\code\.idea\code.iml
+       0.000 MB   code_ref\code\.idea\misc.xml
+       0.000 MB   code_ref\code\.idea\modules.xml
+       0.003 MB   code_ref\code\.idea\workspace.xml
+       0.001 MB   code_ref\code\.idea\inspectionProfiles\Project_Default.xml
+       0.000 MB   code_ref\code\.idea\inspectionProfiles\profiles_settings.xml
+       0.000 MB   code_ref\code\Deep_learning\FBCNet\.idea\.gitignore
+       0.000 MB   code_ref\code\Deep_learning\FBCNet\.idea\FBCNet.iml
+       0.000 MB   code_ref\code\Deep_learning\FBCNet\.idea\misc.xml
+       0.000 MB   code_ref\code\Deep_learning\FBCNet\.idea\modules.xml
+       0.002 MB   code_ref\code\Deep_learning\FBCNet\.idea\workspace.xml
+       0.000 MB   code_ref\code\Deep_learning\FBCNet\.idea\inspectionProfiles\Project_Default.xml
+       0.000 MB   code_ref\code\Deep_learning\FBCNet\.idea\inspectionProfiles\profiles_settings.xml
+       0.026 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\baseModel.py
+       0.007 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\eegDataset.py
+       0.012 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\networks.py
+       0.010 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\old-networks.py
+       0.008 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\samplers.py
+       0.024 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\saveData.py
+       0.004 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\stopCriteria.py
+       0.004 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\testFilterDiff.py
+       0.009 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\transforms.py
+       0.019 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\__pycache__\baseModel.cpython-37.pyc
+       0.007 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\__pycache__\eegDataset.cpython-37.pyc
+       0.013 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\__pycache__\networks.cpython-37.pyc
+       0.008 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\__pycache__\samplers.cpython-37.pyc
+       0.019 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\__pycache__\saveData.cpython-37.pyc
+       0.005 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\__pycache__\stopCriteria.cpython-37.pyc
+       0.008 MB   code_ref\code\Deep_learning\FBCNet\codes\centralRepo\__pycache__\transforms.cpython-37.pyc
+       0.020 MB   code_ref\code\Deep_learning\FBCNet\codes\classify\cv.py
+       0.015 MB   code_ref\code\Deep_learning\FBCNet\codes\classify\ho.py
+
+[二] MAT 文件内部结构
+
+  --- sub-001_ses-01_task-motorimagery_eeg.mat (43.05 MB) ---
+    变量名: ['data', 'labels']
+      data         type=ndarray    shape=(58, 1000, 200)        dtype=float32
+      labels       type=ndarray    shape=(1, 200)               dtype=uint8
+        取值分布: {1: 100, 2: 100}
+
+  --- sub-001_ses-02_task-motorimagery_eeg.mat (43.06 MB) ---
+    变量名: ['data', 'labels']
+      data         type=ndarray    shape=(58, 1000, 200)        dtype=float32
+      labels       type=ndarray    shape=(1, 200)               dtype=uint8
+        取值分布: {1: 100, 2: 100}
+
+  --- sub-001_ses-03_task-motorimagery_eeg.mat (43.01 MB) ---
+    变量名: ['data', 'labels']
+      data         type=ndarray    shape=(58, 1000, 200)        dtype=float32
+      labels       type=ndarray    shape=(1, 200)               dtype=uint8
+        取值分布: {1: 100, 2: 100}

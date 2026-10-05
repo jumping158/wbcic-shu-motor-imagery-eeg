@@ -1,0 +1,36 @@
+============================================================
+阶段3 run_log.txt  实际执行的命令与完整屏幕输出（含 mne 噪声）
+生成时间: 2026-10-05 19:46:24
+被试: 51 名（sub-011 缺失）; 设置 8-30 Hz / 0.5-2.5 s; CSP4+LDA; 5折分层CV; seed=42
+============================================================
+
+### [命令1] & <venv python> step3a_all_subjects.py
+[51/51] sub-052 完成
+
+===== 3A within-session 汇总 =====
+被试数：51
+总体平均±标准差：0.5904 ± 0.1220
+低于 60% 的被试数：36 (70.6%)
+论文 2C CSP+SVM 平均：61.12%%（153 次采集）
+已写 within_session.csv / within_session.png
+
+### [命令2] & <venv python> step3b_cross_session.py
+
+===== 3B 汇总（51 名被试）=====
+同一次采集内（3A）平均：0.5904
+跨天直接迁移 平均：0.5255 ± 0.0661
+跨天加少量适应 平均：0.5718 ± 0.1091
+已写 cross_session.csv / cross_session.png
+
+### [命令3] & <venv python> step3c_fbcsp.py
+[51/51] sub-052
+
+===== 3C FBCSP vs 3A CSP =====
+被试数：51
+CSP+LDA  平均：0.5904 ± 0.1220
+FBCSP+LDA 平均：0.6087 ± 0.1172
+Wilcoxon 符号秩检验：stat=421.0, p=0.03662
+论文 2C：CSP+SVM 61.12%%，FBCSP+SVM 67.46%%
+已写 fbcsp_vs_csp.csv / fbcsp_vs_csp.png
+
+### 说明: 3D EEGNet 为可选项，本次跳过（时间/依赖体积），已在进度.md 注明。
