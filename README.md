@@ -87,7 +87,7 @@ python scripts/step3c_fbcsp.py
 
 见 `figures/accuracy_by_session.png`、`figures/csp_patterns_session1.png`。
 
-**阶段2 · 信号（sub-001 ses-01）**：出现**对侧 ERD 雏形**——左手想象对侧 C4(−1.0%) 比同侧 C3(+0.4%) 降得多；右手想象对侧 C3(−3.7%) 比同侧 C4(−1.9%) 降得多。见 `figures/raw_snippet.png`、`figures/psd.png`、`figures/tfr_C3_C4.png`。
+**阶段2 · 信号**：单被试示例见 `figures/raw_snippet.png`、`figures/psd.png`、`figures/tfr_C3_C4.png`。**群体水平（51 人 × 3 天）对侧 ERD**：以“右手−左手”的 mu/beta log 功率差衡量，C4 显著（mu p=0.014、beta p=3.3e-5，70–78% 被试方向一致），C3 方向符合预期但未达显著；全脑地形图呈左蓝右红的对侧模式（`figures/group_erd_topomap.png`）。
 
 **阶段3A · 全被试 within-session（51 人，CSP+LDA）**
 
@@ -103,7 +103,7 @@ python scripts/step3c_fbcsp.py
 | 跨天直接迁移（第 1 天训练→第 2、3 天测试） | **0.5255 ± 0.0661** |
 | 跨天 + 目标采集前 20% 试次适应 | **0.5718 ± 0.1091** |
 
-见 `figures/cross_session.png`。
+配对检验（n=51，Wilcoxon 符号秩）：适应 vs 直接迁移 **p=1.0e-5**；适应 vs 同一次采集内 **p=0.019**（适应后 0.5718 仍低于同一次采集内 0.5904）。见 `figures/cross_session.png`。
 
 **阶段3C · FBCSP vs CSP（配对比较）**
 
@@ -115,7 +115,7 @@ python scripts/step3c_fbcsp.py
 
 见 `figures/fbcsp_vs_csp.png`。
 
-> 结果文件：`results/within_session.csv`、`results/cross_session.csv`、`results/fbcsp_vs_csp.csv`、`results/accuracy_by_session.csv`。
+> 结果文件：`results/within_session.csv`、`results/cross_session.csv`、`results/fbcsp_vs_csp.csv`、`results/accuracy_by_session.csv`、`results/group_erd_c3c4.csv`、`results/stats_tests.txt`。
 
 ## 7. 局限性
 
@@ -152,8 +152,9 @@ All model fitting (CSP, feature selection, classifier) happens inside a scikit-l
 
 **Key results (measured):**
 - 3A within-session (51 subjects, CSP+LDA): **0.5904 ± 0.1220** (36/51 subjects < 60%).
-- 3B cross-session: within **0.5904** → direct transfer **0.5255 ± 0.0661** → +20% adaptation **0.5718 ± 0.1091**.
+- 3B cross-session: within **0.5904** → direct transfer **0.5255 ± 0.0661** → +20% adaptation **0.5718 ± 0.1091** (adaptation vs direct: Wilcoxon **p=1.0e-5**; adaptation still below within-session, p=0.019).
 - 3C FBCSP+LDA vs CSP+LDA: **0.6087 vs 0.5904**, Wilcoxon **p = 0.0366** (significant).
+- Group-level contralateral ERD (51 subjects): C4 significant (mu p=0.014, beta p=3.3e-5; 70–78% subjects consistent), C3 in expected direction but not significant.
 - Paper reference (2C): CSP+SVM 61.12%, FBCSP+SVM 67.46%, EEGNet 85.32%.
 
 **Limitations:** traditional methods only (no deep learning); fixed band/time-window; single-subject
