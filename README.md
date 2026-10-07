@@ -87,7 +87,7 @@ python scripts/step3c_fbcsp.py
 
 见 `figures/accuracy_by_session.png`、`figures/csp_patterns_session1.png`。
 
-**阶段2 · 信号**：单被试示例见 `figures/raw_snippet.png`、`figures/psd.png`、`figures/tfr_C3_C4.png`。**群体水平（51 人 × 3 天）对侧 ERD**：以“右手−左手”的 mu/beta log 功率差衡量，C4 显著（mu p=0.014、beta p=3.3e-5，70–78% 被试方向一致），C3 方向符合预期但未达显著；全脑地形图呈左蓝右红的对侧模式（`figures/group_erd_topomap.png`）。
+**阶段2 · 信号**：单被试示例见 `figures/raw_snippet.png`、`figures/psd.png`、`figures/tfr_C3_C4.png`。**群体水平（51 人 × 3 天）对侧 ERD**：以“右手−左手”的 mu/beta log 功率差衡量，单电极层面只有 C4 显示显著的对侧效应（mu p=0.014、beta p=3.3e-5，70–78% 被试方向一致）；C3 没有一致的对侧效应（mu 中位数方向相反，43% 被试方向一致，p=0.34）。左右半球不对称的原因尚不清楚，可能与 Pz 参考、个体差异或左手想象更容易诱发有关，这是可以继续检验的问题。群体均值地形图上 mu 频段呈左负右正的对侧模式（左侧峰值偏 C3 后方），beta 频段主要表现为右半球效应；均值图与单电极中位数检验不完全一致，说明效应在被试间差异较大（`figures/group_erd_topomap.png`）。
 
 **阶段3A · 全被试 within-session（51 人，CSP+LDA）**
 
@@ -154,7 +154,7 @@ All model fitting (CSP, feature selection, classifier) happens inside a scikit-l
 - 3A within-session (51 subjects, CSP+LDA): **0.5904 ± 0.1220** (36/51 subjects < 60%).
 - 3B cross-session: within **0.5904** → direct transfer **0.5255 ± 0.0661** → +20% adaptation **0.5718 ± 0.1091** (adaptation vs direct: Wilcoxon **p=1.0e-5**; adaptation still below within-session, p=0.019).
 - 3C FBCSP+LDA vs CSP+LDA: **0.6087 vs 0.5904**, Wilcoxon **p = 0.0366** (significant).
-- Group-level contralateral ERD (51 subjects): C4 significant (mu p=0.014, beta p=3.3e-5; 70–78% subjects consistent), C3 in expected direction but not significant.
+- Group-level contralateral ERD (51 subjects): only C4 showed a significant contralateral effect at the electrode level (mu p=0.014, beta p=3.3e-5; 70–78% subjects consistent); C3 showed no consistent contralateral effect (mu median in the opposite direction, 43% consistent, p=0.34), and the hemispheric asymmetry remains unexplained (possibly Pz reference, inter-subject variability, or left-hand imagery being easier to evoke). The group-mean topomap shows a left-negative/right-positive pattern at mu (peak just posterior to C3) and mainly a right-hemisphere effect at beta; the mean map and the single-electrode median tests are not fully consistent, indicating substantial between-subject variability.
 - Paper reference (2C): CSP+SVM 61.12%, FBCSP+SVM 67.46%, EEGNet 85.32%.
 
 **Limitations:** traditional methods only (no deep learning); fixed band/time-window; single-subject
